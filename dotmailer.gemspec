@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name        = "dotmailer"
   s.version     = DotMailer::VERSION
   s.authors     = ["Econsultancy"]
-  s.email       = ["tech@econsultancy.com"]
+  s.email       = ["tech.support@econsultancy.com"]
   s.homepage    = "https://github.com/econsultancy/dotmailer"
   s.summary     = %q{A Ruby wrapper around the dotMailer REST API: https://apiconnector.com/v2/help/wadl}
 
