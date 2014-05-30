@@ -11,7 +11,7 @@ module DotMailer
       self.api_pass = api_pass
     end
 
-    def get(path, params = {})
+    def get(path, params = "")
       rescue_api_errors do
         endpoint = endpoint_for(path, params)
         response = RestClient.get endpoint, :accept => :json
@@ -106,7 +106,7 @@ module DotMailer
       JSON.parse(exception.http_body)['message']
     end
 
-    def endpoint_for(path, params = {})
+    def endpoint_for(path, params = "")
       URI::Generic.build(
         :scheme   => 'https',
         :userinfo => "#{CGI.escape(api_user)}:#{CGI.escape(api_pass)}",
